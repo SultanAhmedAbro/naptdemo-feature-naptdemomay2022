@@ -32,7 +32,8 @@
                             <groupId>com.napt.api</groupId>
                             <artifactId>API_Framework</artifactId>
                             <version>1.0</version>
-                            <file>${project.basedir}/libs/API_Framework.jar</file>
+                            <scope>system</scope>
+                            <file>${basedir}/libs/API_Framework.jar</file>
                         </configuration>
                     </execution>
                     <execution>
@@ -45,7 +46,8 @@
                             <groupId>com.napt.kibana</groupId>
                             <artifactId>${project.basedir}/Kibana</artifactId>
                             <version>1.0</version>
-                            <file>libs/Kibana.jar</file>
+                            <scope>system</scope>
+                            <file>${basedir}libs/Kibana.jar</file>
                         </configuration>
                     </execution>
                     <execution>
@@ -58,7 +60,8 @@
                             <groupId>com.napt.ui</groupId>
                             <artifactId>UI_Framework</artifactId>
                             <version>1.0</version>
-                            <file>${project.basedir}/libs/UI_Framework.jar</file>
+                            <scope>system</scope>
+                            <file>${basedir}/libs/UI_Framework.jar</file>
                         </configuration>
                     </execution>
                 </executions>
