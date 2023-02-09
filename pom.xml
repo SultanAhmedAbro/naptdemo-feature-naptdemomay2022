@@ -57,7 +57,7 @@
                         <configuration>
                             <groupId>com.napt.ui</groupId>
                             <artifactId>UI_Framework</artifactId>
-                            <version>1.0</version>
+                            <!--<version>1.0</version>-->
                             <file>$CIRCLE_WORKING_DIRECTORY/libs/UI_Framework.jar</file>
                         </configuration>
                     </execution>
