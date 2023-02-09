@@ -32,7 +32,7 @@
                             <groupId>com.napt.api</groupId>
                             <artifactId>API_Framework</artifactId>
                             <version>1.0</version>
-                            <file>$CIRCLE_WORKING_DIRECTORY/libs/API_Framework.jar</file>
+                            <file>/home/circleci/project/libs/API_Framework.jar</file>
                         </configuration>
                     </execution>
                     <execution>
@@ -45,7 +45,7 @@
                             <groupId>com.napt.kibana</groupId>
                             <artifactId>Kibana</artifactId>
                             <version>1.0</version>
-                            <file>$CIRCLE_WORKING_DIRECTORY/libs/Kibana.jar</file>
+                            <file>/home/circleci/project/libs/Kibana.jar</file>
                         </configuration>
                     </execution>
                     <execution>
@@ -57,8 +57,8 @@
                         <configuration>
                             <groupId>com.napt.ui</groupId>
                             <artifactId>UI_Framework</artifactId>
-                            <!--<version>1.0</version>-->
-                            <file>$CIRCLE_WORKING_DIRECTORY/libs/UI_Framework.jar</file>
+                            <version>1.0</version>
+                            <file>/home/circleci/project/libs/UI_Framework.jar</file>
                         </configuration>
                     </execution>
                 </executions>
