@@ -30,7 +30,14 @@ jobs: # a collection of steps
        #   key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       - run: pwd && ls -lah && ls -lah libs
       - run: mvn clean test '-Dcucumber.filter.tags= @s1' -Dcucumber.execution.parallel.config.strategy=fixed -Dcucumber.execution.parallel.enabled=true -Dcucumber.execution.parallel.config.fixed.parallelism=1 -Dcucumber.glue=com.nisum.api -DtestType=api -Dcucumber.features=features/api/ -Dcucumber.plugin=pretty -Dcucumber.plugin=html:target/cucumber.html -Dcucumber.plugin=json:target/cucumber.json
-
+      - run: ''' cd target 
+			 curl --location --request POST 'http://20.106.132.29:8083/GithubBranchesApp/post-jenkins-actions/' \
+			--header 'cache-control: no-cache' \
+			--form 'project="'$JOB_NAME'"' \
+			--form 'buildDate="1672758158098"' \
+			--form 'buildNumber="'$BUILD_NUMBER'"' \
+			--form 'file=@"cucumber.json"'
+			'''
 
       
  # run the actual tests
