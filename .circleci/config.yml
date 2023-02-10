@@ -29,7 +29,8 @@ jobs: # a collection of steps
         #    - ~/.m2
        #   key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       - run: pwd && ls -lah && ls -lah libs
-      - run: mvn clean test '-Dfeatures={features/api/ApiTests.feature:37}' -DtestType=API
+      - run: mvn clean test -Dcucumber.options=features/api/ApiTests2.feature:37 -Dglue=com.nisum.ebay.steps -DElementWaitTimeoutInSeconds=30 -DdriverPath=http://18.237.164.208:4444/wd/hub -DimplicitWaitSeconds=30 -DtestType=seleniumgrid -Dcap.browserName=chrome -Dfeatures=features/ebay -Dexperience=desktop -DwebURL=https://www.ebay.com -Dcap.platformName=MAC -DexplicitShortWait=10 -DexplicitLongWait=30
+
       
  # run the actual tests
 
